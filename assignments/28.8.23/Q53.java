@@ -1,4 +1,4 @@
-class  Q53{
+class Q53 {
     public int maxSubArray(int[] nums) {
         int maxSum = nums[0];
         int currentSum = nums[0];
