@@ -8,17 +8,24 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Q206 {
-    public ListNode reverseList(ListNode head) {
-        ListNode prev=null;
+class Q876 {
+    public ListNode middleNode(ListNode head) {
+        int len =0;
         ListNode tmp=head;
-        ListNode next=null;
-        while(tmp!=null){
-            next=tmp.next;
-            tmp.next=prev;
-            prev=tmp;
-            tmp=next;
+        if(head==null){
+            return null;
         }
-        return prev;
+
+        while(tmp!=null){
+            len++;
+            tmp=tmp.next;
+        }
+        int middle =len/2;
+        tmp=head;
+
+        for(int i=0;i<middle;i++){
+            tmp=tmp.next;
+        }
+        return tmp;
     }
 }
