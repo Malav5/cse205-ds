@@ -34,10 +34,11 @@ class Solution {
 
                 if(curr_Node.right != null) q.add(curr_Node.right);
 
-            }
+            } 
 
             level.add(curr_level);
         }
+
 
         return level;
     }
