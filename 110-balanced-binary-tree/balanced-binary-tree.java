@@ -23,8 +23,7 @@ class Solution {
     }
 
     public int depth(TreeNode root){
-        if(ans == false) return 0;
-        if(root == null){
+        if(root == null || ans == false){
             return 0;
         }
 
